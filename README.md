@@ -4,7 +4,7 @@
 
 | Fonctionnalité   | État    | Développeur |
 | ---------------- | ------- | ----------- |
-| Fonctionnalité 1 | À faire |             |
+| Fonctionnalité 1 | ✅      | Marcelin    |
 | Fonctionnalité 2 | À faire |             |
 | Fonctionnalité 3 | À faire |             |
 | Fonctionnalité 4 | À faire |             |
