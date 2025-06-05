@@ -1,0 +1,39 @@
+name: lachaudiere
+description: "Agenda culturel de La Chaudière"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_native_splash: ^2.3.10
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/splash/ChaudiereLogo.png
+    - assets/icon/ChaudiereLogo.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/ChaudiereLogo.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/splash/ChaudiereLogo.png
+  android: true
+  ios: true
+  web: true
+  fullscreen: true
