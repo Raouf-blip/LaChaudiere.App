@@ -48,3 +48,6 @@ app.*.map.json
 linux/
 windows/
 macos/
+
+
+.env
