@@ -13,6 +13,7 @@ dependencies:
   flutter_native_splash: ^2.3.10
   cupertino_icons: ^1.0.8
   http: ^0.13.1
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -23,7 +24,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - .env
     - assets/
+
 
 flutter_icons:
   android: true

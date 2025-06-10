@@ -1,12 +1,12 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
-import '../models/event.dart';
+import '../models/category.dart';
 
-class ApiService {
+class Api {
+  static final String baseUrl = dotenv.env['API_BASE_URL'] ?? '';
 
-  static const String baseUrl = '';
-
-  static Future<Event> getCategories() async {
+  static Future<List<Category>> getCategories() async {
     try {
       final response = await http.get(
         Uri.parse('$baseUrl/categories'),
@@ -16,10 +16,10 @@ class ApiService {
       );
 
       if (response.statusCode == 200) {
-        final Map<String, dynamic> jsonData = json.decode(response.body);
-        return Event.fromJson(jsonData);
+        final List<dynamic> jsonData = json.decode(response.body);
+        return jsonData.map((e) => Category.fromJson(e)).toList();
       } else {
-        throw Exception('Erreur lors du chargement de l\'événement: ${response.statusCode}');
+        throw Exception('Erreur HTTP: ${response.statusCode}');
       }
     } catch (e) {
       throw Exception('Erreur de connexion: $e');
