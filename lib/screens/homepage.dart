@@ -11,13 +11,6 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Accueil', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blueAccent,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.person),
-            color: Colors.white,
-            onPressed: () {},
-          ),
-        ],
       ),
       body: Center(
         child: Column(
