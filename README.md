@@ -4,11 +4,11 @@
 
 | Fonctionnalité   | État    | Développeur |
 | ---------------- | ------- | ----------- |
-| Fonctionnalité 1 | ✅      | Marcelin    |
-| Fonctionnalité 2 | À faire |             |
-| Fonctionnalité 3 | À faire |             |
-| Fonctionnalité 4 | À faire |             |
-| Fonctionnalité 5 | À faire |             |
-| Fonctionnalité 6 | À faire |             |
-| Fonctionnalité 7 | À faire |             |
-| Fonctionnalité 8 | À faire |             |
+| Fonctionnalité 1 | ✅     |   Marcelin  |
+| Fonctionnalité 2 | ✅     |   Clément   |
+| Fonctionnalité 3 | ✅     |   Clément   |
+| Fonctionnalité 4 | ✅     |   Clément   |
+| Fonctionnalité 5 | ✅     |   Clément   |
+| Fonctionnalité 6 | ✅     |   Clément   |
+| Fonctionnalité 7 | En cours |   Clément   |
+| Fonctionnalité 8 | A faire |            |
