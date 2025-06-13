@@ -8,7 +8,7 @@ class Event {
   final DateTime? start_time;
   final DateTime? end_time;
   final double? price;
-  final String? image_id;
+  final String? image;
   final String category;
   final String? author;
   final bool is_published;
@@ -25,7 +25,7 @@ class Event {
     this.start_time,
     this.end_time,
     this.price,
-    this.image_id,
+    this.image,
     this.author,
   });
 
@@ -33,16 +33,16 @@ class Event {
     return Event(
       id: json['id'].hashCode,
       title: json['title'] ?? '',
-      description: '',
+      description: json['description'] ?? '',
       start_date: DateTime.parse(json['start_date']),
       end_date: DateTime.parse(json['end_date']),
-      category: json['category'],
+      category: json['category'] ?? '',
       is_published: true,
-      artist: null,
+      artist: json['artist'] ?? '',
       start_time: null,
       end_time: null,
-      price: null,
-      image_id: null,
+      price: json['price'] ?? 0,
+      image: json['image'] ?? '',
       author: null,
     );
   }
@@ -61,14 +61,14 @@ class Event {
       'heure_start': start_time?.toIso8601String(),
       'heure_end': end_time?.toIso8601String(),
       'price': price,
-      'image': image_id,
+      'image': image,
       'author': author,
     };
   }
 
   @override
   String toString() {
-    return 'Event{id: $id, name: $title, description: $description, dateStart: $start_date, dateEnd: $end_date, heureStart: $start_time, heureEnd: $end_time, price: $price, image: $image_id, category: $category, author: $author}';
+    return 'Event{id: $id, name: $title, description: $description, dateStart: $start_date, dateEnd: $end_date, heureStart: $start_time, heureEnd: $end_time, price: $price, image: $image, category: $category, author: $author}';
   }
 
   @override
