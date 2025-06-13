@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lachaudiere/api/themeprovider.dart';
 import 'package:lachaudiere/widget/categorylistpage.dart';
 import 'package:lachaudiere/widget/eventlistpage.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,6 +13,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Accueil', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blueAccent,
+        actions: [
+          IconButton(
+            icon: Icon(Provider.of<ThemeProvider>(context).isDarkMode
+                ? Icons.wb_sunny
+                : Icons.nightlight_round),
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
